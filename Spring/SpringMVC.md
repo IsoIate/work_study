@@ -62,6 +62,31 @@ public String view(Model model) {
 ```
 
 ### ModelAndView 
+- Model 객체와 크게 다르지 않음
+- 반환값으로 ModelAndView 객체를 반환한다.
+- 뷰의 이름은 setViewName("뷰의 경로") 메서드를 사용하여 작성한다.
+- 데이터를 보낼 때는 addObject("변수이름", "데이터값") 메서드를 사용하여 전송한다.
+- 뷰에서는 ${}를 통해 값을 받을 수 있다.
+- 
+```
+@RequestMapping("/board/content") 
+public ModelAndView content() { 
+
+  // 데이터와 뷰를 동시에 설정이 가능 
+  ModelAndView mv = new ModelAndView(); 
+  
+  mv.setViewName("/board/content"); // 뷰의 이름 
+  mv.addObject("data", "12341234"); // 뷰로 보낼 데이터 값 
+  
+  return mv; 
+}
+
+// 뷰 페이지
+<body>
+  <h1> view.jsp <h1>
+  <p> 전송받은 데이터는 ${data} 입니다. <p>
+</body>
+```
 
 
 
