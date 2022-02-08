@@ -95,6 +95,7 @@ public class Sample {
 #### 예외 던지기 (throws)
 - 메서드 내에서 예외를 처리하지 않고 메서드를 호출한 곳에서 예외를 처리하도록 하는 방법
 - 메서드 뒤에 throws [예외명] 을 입력하여 사용한다.
+- __예외 처리를 어디서 하느냐에 따라 프로그램의 수행 여부가 변경되므로 Exception의 위치는 대단히 중요하다.__ 
 
 ```
 class FoolException extends Exception {
@@ -119,6 +120,8 @@ public class Sample {
     }
 }
 ```
+
+
 
 
 
