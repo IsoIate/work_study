@@ -29,3 +29,26 @@ HashMap<String, Integer> map = new HashMap<>();
   String replace = StringUtils.replace("abcabc", "abc", "bbb");
   System.out.println(replace)   // bbbabc
 ```
+
+### 예외 처리
+- 프로그램을 실행시켰을 때 발생하는 에러를 대응하기 위한 기능
+
+#### try catch
+- try catch 를 처리하는 방식은 아래와 같다.
+- try 블록 안에서 예외가 발생하면 그 순간에 코드 실행을 중단
+- 발생된 예외종류가 catch 블럭의 ( ) 안에 지정한 예외와 일치하면 그 안의 코드를 실행
+- catch 블록 안의 코드가 모두 실행되면 try catch 블록 다음에 등장하는 코드를 실행
+
+#### finally
+- finally 구문은 예외처리가 발생여부를 떠나 무조건 실행하도록 하는 구문이다.
+
+
+
+
+
+
+
+
+
+
+
