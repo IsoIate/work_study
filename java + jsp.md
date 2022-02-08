@@ -42,7 +42,83 @@ HashMap<String, Integer> map = new HashMap<>();
 #### finally
 - finally 구문은 예외처리가 발생여부를 떠나 무조건 실행하도록 하는 구문이다.
 
+#### RuntimeExeption과 Exception
+- RuntimeException은 실행시 발생하는 예외이고 Exception은 컴파일시 발생하는 예외이다. 
+- 즉, Exception은 프로그램 작성시 이미 예측가능한 예외를 작성할 때 사용하고 RuntimeException은 발생 할수도 발생 안 할수도 있는 경우에 작성한다.
 
+```
+class FoolException extends RuntimeException {
+}
+
+public class Sample {
+    public void sayNick(String nick) {
+        if("fool".equals(nick)) {
+            throw new FoolException();
+        }
+        System.out.println("당신의 별명은 "+nick+" 입니다.");
+    }
+
+    public static void main(String[] args) {
+        Sample sample = new Sample();
+        sample.sayNick("fool");
+        sample.sayNick("genious");
+    }
+}
+```
+- 위 코드를 실행 시 RuntimeExceiption이 발생한다.
+- 위 코드에서 RuntimeExceiption을 Exception으로 변경하면 컴파일 에러가 발생하며, 해당 부분을 아래처럼 수정해 주어야 정상실행이 가능하다.
+
+```
+class FoolException extends Exception {
+}
+
+public class Sample {
+    public void sayNick(String nick) {
+        try {
+            if("fool".equals(nick)) {
+                throw new FoolException();
+            }
+            System.out.println("당신의 별명은 "+nick+" 입니다.");
+        }catch(FoolException e) {
+            System.err.println("FoolException이 발생했습니다.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Sample sample = new Sample();
+        sample.sayNick("fool");
+        sample.sayNick("genious");
+    }
+}
+```
+
+#### 예외 던지기 (throws)
+- 메서드 내에서 예외를 처리하지 않고 메서드를 호출한 곳에서 예외를 처리하도록 하는 방법
+- 메서드 뒤에 throws [예외명] 을 입력하여 사용한다.
+
+```
+class FoolException extends Exception {
+}
+
+public class Sample {
+    public void sayNick(String nick) throws FoolException {
+        if("fool".equals(nick)) {
+            throw new FoolException();
+        }
+        System.out.println("당신의 별명은 "+nick+" 입니다.");
+    }
+
+    public static void main(String[] args) {
+        Sample sample = new Sample();
+        try {
+            sample.sayNick("fool");
+            sample.sayNick("genious");
+        } catch (FoolException e) {
+            System.err.println("FoolException이 발생했습니다.");
+        }
+    }
+}
+```
 
 
 
