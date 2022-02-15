@@ -1,3 +1,9 @@
+## input value값 가져오기
+- input value를 가져오는 방법은 id, class, name으로 3가지이다.
+- var id = $("#id").val()
+- var class = $('.class').val()
+- var name = $('input[name=abc]').val()
+
 ## jQuery.extend()
 - 복수의 오브젝트를 합쳐서(merge) 돌려주는 함수
 - jQuery.extend(target[, object1][, objectN])
