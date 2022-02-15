@@ -15,3 +15,19 @@
 - <c:when>	: switch문의 case에 해당
 - <c:otherwise> :	switch문의 default에 해당
 - <c:forEach> :	다른언어의 loop문 items 속성에 배열을 할당할 수 있음
+
+### 알아두면 좋은 JSTL 표현들
+- javascript에서 model parameter를 가져오는 방법
+```
+var key = '<c:out value='${key}' />';
+```
+- javascript에서 context path를 가져오는 방법
+```
+var G_CONTEXT_PATH = "${pageContext.request.contextPath}";
+```
+- jsp에서 url의 get parameter 가져오는 방법
+```
+<c:if test="${param.loginFail eq 'true'}">
+  <div class="login-fail">아이디 혹은 비밀번호가 일치하지 않습니다.</div>
+</c:if>
+```
