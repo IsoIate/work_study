@@ -16,6 +16,15 @@
   - eq, ne, empty 사용 
 - <c:otherwise> :	switch문의 default에 해당
 - <c:forEach> :	다른언어의 loop문 items 속성에 배열을 할당할 수 있음
+```
+// 일반적인 사용 예
+<c:forEach var="item" items="${items}">
+     <p>번호 : ${status.index}</p>
+     <p>책명 : ${item.name}</p>
+     <p>저자 : ${item.author}</p>
+     <p>출판사 : ${item.publisher}</p>
+</c:forEach>
+```
 
 ### 알아두면 좋은 JSTL 표현들
 - javascript에서 model parameter를 가져오는 방법
