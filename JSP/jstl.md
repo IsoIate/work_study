@@ -13,6 +13,7 @@
 - <c:if> :	조건식에 해당하는 블럭과 사용될 scope설정
 - <c:choose>	: 다른 언어의 switch와 비슷
 - <c:when>	: switch문의 case에 해당
+  - eq, ne, empty 
 - <c:otherwise> :	switch문의 default에 해당
 - <c:forEach> :	다른언어의 loop문 items 속성에 배열을 할당할 수 있음
 
