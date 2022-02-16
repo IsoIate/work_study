@@ -22,9 +22,9 @@
 
 ### APPEND(), PREEND() 함수
 - 이 함수는 요소의 마지막에 자식요소를 추가해 주는 함수입니다.
-- $("#KGON").append(\"<option value="kgon3">케이곤3\</option>"); KGON이라는 이름을 가진 ID의 마지막자식요소로 \<option value="kgon3">케이곤3\</option>을 추가합니다. 
+- $("#KGON").append("\<option value="kgon3">케이곤3\</option>"); KGON이라는 이름을 가진 ID의 마지막자식요소로 \<option value="kgon3">케이곤3\</option>을 추가합니다. 
 - 이 함수는 요소의 처음에 자식요소를 추가해주는 함수입니다.
-- $("#KGON").preend(\"<option value="kgon0">케이곤0\</option>"); KGON이라는 이름을 가진 ID의 처음자식요소로 \<option value="kgon0">케이곤0\</option>을 추가합니다
+- $("#KGON").preend("\<option value="kgon0">케이곤0\</option>"); KGON이라는 이름을 가진 ID의 처음자식요소로 \<option value="kgon0">케이곤0\</option>을 추가합니다
 
 ## jQuery.extend()
 - 복수의 오브젝트를 합쳐서(merge) 돌려주는 함수
