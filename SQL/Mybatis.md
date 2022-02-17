@@ -3,6 +3,7 @@
 
 ## \#를 사용할 때
 - #을 사용할 경우 오라클의 PreparedStatment를 사용하게 된다.
+- 변수에 자동으로 \'가 붙기 때문에 '#{id}' 등과 같이 작성하지 않아도 된다.
 ```
 // 예제(name=John)
    a. mybatis mapper
