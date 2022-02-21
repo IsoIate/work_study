@@ -65,6 +65,12 @@ var b = {
  
 var newobject = $.extend({}, a, b);
 ```
+## 이벤트리스너 안에서 쓰는 이벤트 함수들 
+- 이벤트리스너 콜백함수안에 파라미터를 하나 추가하면 이벤트관련 함수들을 쓰실 수 있습니다. 
+- e.target은 지금 실제 클릭한 요소
+- e.currentTarget은 지금 이벤트리스너가 달린 곳 (참고로 this라고 쓰셔도 같은 의미입니다.)
+- e.preventDefault()는 기본 동작을 막을 때 쓰고 
+- e.stopPropagation()은 내 상위요소로의 이벤트 버블링을 중단할 때 씁니다. 
 
 
 
