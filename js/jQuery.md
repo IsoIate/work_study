@@ -1,8 +1,18 @@
-## input value값 가져오기
+## input value 값 가져오기
 - input value를 가져오는 방법은 id, class, name으로 3가지이다.
 - var id = $("#id").val()
 - var class = $('.class').val()
 - var name = $('input[name=abc]').val()
+
+## radio 선택된 값 가져오기
+```
+// radio 선택된 값 가져오기 
+$('input[name=gender]:radio'); 
+var radiovalue = $('input[name=라디오버튼네임]:checked').val();
+
+// radio의 value값으로 선택하기 
+$("input[@name=rList]").filter('input[@value='+sValue+']').attr("checked", "checked");
+```
 
 ## 자주 사용하는 jQuery 함수
 ### VAL() 함수
