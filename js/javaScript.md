@@ -47,9 +47,38 @@ function data(params) {
 }
 ```
 
+## indexOf(), lastIndexOf()
+- indexOf() : 호출하는 문자열 내 특정 값이 등장하는 첫 인덱스를 리턴하며, 발견되지 않으면 -1을 리턴함
+- lastIndexOf() : 호출하는 문자열 내 특정 값이 등장하는 마지막 인덱스를 리턴하며, 발견되지 않으면 -1을 리턴함
+
+```
+// indexOf 예시 (배열도 사용 가능)
+const text = 'Show me the money, big money';
+const search = 'money';
+console.log(text.indexOf(search)); // 12
 
 
+// lastIndexOf 예시 (배열도 사용 가능)
+const text = 'Show me the money, big money';
+const search = 'money';
+console.log(text.lastIndexOf(search)); // 23
+```
+- 위 두 함수를 사용하여 중복 체크를 할 수 있다.
 
+```
+const words = ['a', 'b', 'c', 'a'];
+
+for(let i = 0; i < words.length; i++) {
+  if(words.indexOf(words[i]) === words.lastIndexOf(words[i])) {
+    console.log("unique word");
+  }
+  else {
+    console.log("duplicated word");
+  }
+}
+
+// 중복 단일 단일 중복
+```
 
 
 
