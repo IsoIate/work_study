@@ -27,3 +27,48 @@ for (var prop in obj) {
     console.log(prop, obj[prop]); // a 1, b 2, c 3
 }
 ```
+
+## filter
+- 특정 조건에 부합하는 값을 찾아서 그 값들로 새로운 배열을 만들어 리턴한다.
+
+```
+// 사용 예시
+arr.filter(callback(element[, index[, array]])[, thisArg]
+
+const arr = [1, undefined, null, false, , '', '    '];
+const newArr = arr.filter(data);
+
+newArr.forEach((e, i) => {
+  document.write(i + " : " + e + '<br>')
+})
+
+function data(params) {
+  return params != false && params != null && params != undefined;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
