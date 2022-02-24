@@ -82,7 +82,29 @@ var newobject = $.extend({}, a, b);
 - e.preventDefault()는 기본 동작을 막을 때 쓰고 
 - e.stopPropagation()은 내 상위요소로의 이벤트 버블링을 중단할 때 씁니다. 
 
+## eq() 함수
+- 선택한 요소의 인덱스 번호에 해당하는 요소를 찾는다
+- 없으면 null 반환
 
+```
+// 예시
+<div class="test">
+  <ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+  </ul>
+</div>
+
+<script>
+  
+  let testData = $(".test li").eq(1);
+
+  // li태그중 1번 인덱스의 값인 b를 반환
+  console.log(testData.text()); // b
+
+</script>
+```
 
 
 
