@@ -4,6 +4,33 @@
 - var class = $('.class').val()
 - var name = $('input[name=abc]').val()
 
+## name 지정자 가져오기, 동일 name 여러개 가져오기
+- 동일한 name을 사용하는 요소의 값을 각각 가져오고 싶을 때 사용
+
+```
+// 예시
+<input type="hidden" name="groupod" value="1">
+<input type="hidden" name="groupod" value="2">
+<input type="hidden" name="groupod" value="3">
+
+<input type="button" id="commentbtn" value="배열만들기"/></td>
+
+$(function(){
+
+	$('#commentbtn').on('click', function(){
+    	//값들의 갯수 -> 배열 길이를 지정
+		var grpl = $("input[name=groupod]").length;
+		//배열 생성
+		var grparr = new Array(grpl);
+		//배열에 값 주입
+		for(var i=0; i<grpl; i++){                          
+			grparr[i] = $("input[name=groupod]").eq(i).val();
+	        alert(grparr[i]);
+	    }
+	});
+});
+```
+
 ## radio 선택된 값 가져오기
 ```
 // radio 선택된 값 가져오기 
