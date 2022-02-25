@@ -41,3 +41,29 @@ var G_CONTEXT_PATH = "${pageContext.request.contextPath}";
   <div class="login-fail">아이디 혹은 비밀번호가 일치하지 않습니다.</div>
 </c:if>
 ```
+
+## subString
+- JSTL에서 문자를 자르고 싶을 때 사용
+```
+// 사용법
+${fn:subString(String, num1, num2)}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
