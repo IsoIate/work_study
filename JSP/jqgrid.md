@@ -19,6 +19,12 @@ $('#그리드 아이디').delRowData('원하는 rowid')
 ```
 $('#그리드 아이디').jqGrid('clearGridData')
 ```
+- auto resize
+```
+$(window).on('resize.jqGrid', function () {
+		$("테이블명").jqGrid( 'setGridWidth', $("jqgrid를 감싸는 div명").width() );
+	});
+```
 
 
 
